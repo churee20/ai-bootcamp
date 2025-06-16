@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-community
+langchain-openai
+python-dotenv
+chromadb
+langfuse
+httpx # Required for OpenAI API connection
+
+pandas==2.1.3
+plotly==5.17.0 
