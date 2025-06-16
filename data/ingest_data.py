@@ -1,7 +1,13 @@
 import os
+import sys # Added for sys.path modification
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
+
+# 현재 파일의 디렉토리를 sys.path에 추가하여 모듈을 찾을 수 있도록 함
+# This ensures that imports like 'from config.config import ...' work correctly
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from config.config import get_embeddings # config.py에서 임베딩 함수 임포트
 
 # ChromaDB 저장 경로
